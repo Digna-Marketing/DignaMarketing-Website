@@ -15,7 +15,7 @@ function videos() {
         $.get("https://www.googleapis.com/youtube/v3/videos?part=snippet&id=" + videoId + "&key=" + ytApiKey, function(data_yt) {
           var videoName = data_yt.items[0].snippet.title;
           videoId = data_yt.items[0].id;
-          node.innerHTML += '<h5>' + videoName + '</h5><iframe width = "560" height = "315" src = https://www.youtube.com/embed/' + videoId + ' frameborder = "0" allow = "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><br></br>';
+          node.innerHTML += '<h5>' + videoName + '</h5><iframe class="tut-vid" width = "560" height = "500" src = https://www.youtube.com/embed/' + videoId + ' frameborder = "0" allow = "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><br></br>';
         });
         }
     }
